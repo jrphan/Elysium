@@ -191,7 +191,7 @@ body {
 }
 
 .banner_container .banner_text {
-  font-family: var(--font-title) !important;
+  font-family: var(--font-title-thin) !important;
   font-size: 17.7rem;
   line-height: 18rem;
   width: 150rem;
@@ -202,13 +202,12 @@ body {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
+  text-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 
 .banner_container .banner_text span {
-  font-family: var(--font-title) !important;
+  font-family: var(--font-title-thin) !important;
   color: var(--text-brand);
-  mix-blend-mode: difference;
-
 }
 
 /* Dream Homes */
@@ -233,7 +232,12 @@ body {
   flex-direction: column;
 }
 
+.dream_home_container .dream_home_text .text_color_light {
+  font-family: var(--font-title) !important;
+}
+
 .dream_home_container .dream_home_text .text_color_brand {
+  font-family: var(--font-title) !important;
   color: var(--text-brand);
   max-width: 150rem;
 }
@@ -318,9 +322,9 @@ body {
   padding-bottom: 20rem;
 }
 
-.service_container .service_text  {
+.service_container .service_text {
   padding-bottom: 7rem;
-  border-bottom: 0.1rem solid #FFFFFF;
+  border-bottom: 0.1rem solid #ffffff;
 }
 
 .service_container .service_text .service_title {
@@ -336,6 +340,66 @@ body {
   font-family: var(--font-title) !important;
 }
 
+.service_container .service_desc {
+  padding-left: 38rem;
+}
+
+.service_container .service_desc .desc_item {
+  padding-top: 4.2rem;
+  padding-bottom: 5.6rem;
+  border-bottom: 0.1rem solid #ffffff;
+  display: flex;
+  align-items: flex-start;
+  gap: 10.4rem;
+}
+
+.service_container .service_desc .desc_item .item_index {
+  width: 14.4rem;
+  height: 14.4rem;
+  border-radius: 50%;
+  border: 0.162rem solid var(--text-brand);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-family: var(--font-title) !important;
+  font-size: 7rem;
+  font-weight: 400;
+  line-height: 7.126rem;
+}
+
+.service_container .service_desc .desc_item .item_content {
+  display: flex;
+  flex-direction: column;
+  gap: 7.5rem;
+  width: calc(50% + 42rem);
+}
+
+.service_container .service_desc .desc_item .item_content .item_title {
+  padding-top: 4.6rem;
+  font-family: var(--font-title) !important;
+  font-size: 5rem;
+  line-height: 5rem;
+  text-transform: uppercase;
+}
+
+.service_container .service_desc .desc_item .item_content .item_desc {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.service_container
+  .service_desc
+  .desc_item
+  .item_content
+  .item_desc
+  .max_width_desc {
+  padding-top: 4.8rem;
+  border-top: 0.1rem solid #ffffff;
+  max-width: 51rem;
+  font-size: 2rem;
+  line-height: 2.416rem;
+}
 
 /* Prioritize */
 .prioritize_section {
@@ -358,13 +422,51 @@ body {
   bottom: 0;
   padding: 8.2rem 5.7rem 6rem 12.7rem;
   background-color: var(--text-brand);
-  color: var( --bg-main);
+  color: var(--bg-main);
   font-family: var(--font-title) !important;
   font-size: 9rem;
   line-height: 9.162rem;
   text-align: left;
   max-width: 96.1rem;
   text-transform: uppercase;
+}
+
+/* Statistical */
+.statistical_section {
+  padding-top: 26.6rem;
+  padding-bottom: 23.1rem;
+  width: 100%;
+  max-width: var(--width-page);
+  margin: auto;
+  display: flex;
+}
+
+.statistical_section .statistical_item {
+  width: 25%;
+  margin: 0 5rem;
+  padding: 4rem 0 4.8rem 0;
+  border-top: 0.2rem solid var(--text-brand);
+  border-bottom: 0.2rem solid var(--text-brand);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.statistical_section .statistical_item p {
+  margin: 0;
+  font-family: var(--font-title) !important;
+  color: var(--text-brand);
+  font-size: 8.739rem;
+  line-height: 8.896rem;
+}
+
+.statistical_section .statistical_item span {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.416rem;
+  letter-spacing: 0.1em;
 }
 
 /* Footer */
@@ -394,8 +496,10 @@ footer {
 
 .footer_container .phone_footer {
   font-family: var(--font-title-thin) !important;
-  font-size: 17.7rem;
-  line-height: 18.019rem;
+  /* font-size: 17.7rem; */
+  font-size: 14rem;
+  /* line-height: 18.019rem; */
+  line-height: 16rem;
   font-weight: 200;
   color: var(--text-brand);
   margin-bottom: 6.8rem;
@@ -450,6 +554,6 @@ footer {
 .footer_container .copyright_footer {
   font-size: 1.8rem;
   line-height: 2.16rem;
-  color: #FFFFFF80;
+  color: #ffffff80;
   text-transform: uppercase;
 }
