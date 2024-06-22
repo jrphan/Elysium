@@ -54,7 +54,7 @@
 
   .dream_home_container .dream_home_desc {
     flex-direction: column;
-    gap: 4rem;
+    gap: 6rem;
   }
 
   .dream_home_container .dream_home_desc .dream_home_desc_images {
@@ -363,6 +363,10 @@
     margin-left: 2rem;
   }
 
+  .slider_footer .slider_discover div {
+    font-size: 2rem;
+  }
+
   .instagram_section .instagram_right .instagram_img_04 {
     display: none;
   }
@@ -383,6 +387,25 @@
   .footer_container .contact_footer {
     margin-bottom: 8rem;
   }
+
+  .slider_section_fit_first {
+    margin-left: 4rem;
+  }
+
+  .slider_section_scrollbar {
+    background-color: rgb(255 255 255 / 70%) !important;
+    height: 0.2rem;
+    width: 87% !important;
+    left: 4rem !important;
+    border-radius: 0;
+  }
+  
+.slider_container .slider_footer {
+  padding: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
 
   .statistical_section,
   .dream_home_section,
