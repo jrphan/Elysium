@@ -10,6 +10,42 @@ let discover_btn_01 = document.getElementById("discover_btn_01");
 let discover_btn_02 = document.getElementById("discover_btn_02");
 let discover_btn_03 = document.getElementById("discover_btn_03");
 
+function isMobile() {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
+}
+
+function isIOS() {
+  return /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+}
+
+function isIPad() {
+  return (
+    /iPad/.test(navigator.userAgent) ||
+    (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)
+  );
+}
+
+if (!isMobile() && !isIPad() && !isIOS()) {
+  var Scrollbar = window.Scrollbar;
+  Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
+} else {
+  // Add CSS styles dynamically
+  var style = document.createElement("style");
+  style.innerHTML = `
+    body {
+      overflow: auto;
+      overflow-x: hidden;
+    }
+
+    main {
+      overflow: auto !important;
+    }
+  `;
+  document.head.appendChild(style);
+}
+
 const toggleActive = (element, elementTitle) => {
   element.classList.toggle("active");
   elementTitle.classList.toggle("active");
@@ -48,6 +84,3 @@ const swiper = new Swiper(".swiper", {
     el: ".swiper-scrollbar",
   },
 });
-
-var Scrollbar = window.Scrollbar;
-Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
