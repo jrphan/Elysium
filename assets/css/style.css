@@ -217,7 +217,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  text-shadow: 0.2rem 0.2rem 0.5rem #000;
+  /* text-shadow: 0.2rem 0.2rem 0.5rem #000; */
 }
 
 .banner_container .banner_text span {
@@ -440,6 +440,9 @@ a {
 .slider_section_scrollbar {
   background-color: rgb(255 255 255 / 70%) !important;
   height: 0.2rem;
+  width: 90% !important;
+  left: 10rem !important;
+  border-radius: 0;
 }
 
 .slider_section_scrollbar  .swiper-scrollbar-drag {
@@ -450,7 +453,7 @@ a {
 }
 
 .slider_container .slider_footer {
-  padding: 2.4rem 2rem;
+  padding: 2.4rem 9rem 2.4rem 10rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1014,6 +1017,7 @@ a {
   font-size: 2rem;
   font-weight: 300;
   line-height: 2.416rem;
+  color: #ffffff80;
 }
 
 .discover_container .discover_right .any_question a {
@@ -1200,7 +1204,7 @@ a {
   z-index: 10;
   color: var(--text-brand);
   text-transform: uppercase;
-  text-shadow: 0.2rem 0.2rem 0.5rem #000;
+  /* text-shadow: 0.2rem 0.2rem 0.5rem #000; */
 }
 
 .instagram_section .instagram_left {
