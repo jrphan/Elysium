@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
 
     <!-- Lib Css  -->
+    <link rel="stylesheet" href="assets/css/animate.min.css" />
     <link rel="stylesheet" href="assets/css/smooth-scrollbar.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!-- Css -->
@@ -105,21 +106,119 @@
         </div>
       </section>
 
-      <!-- <section>
-        <div class="swiper">
-          <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
+      <!-- Slider section  -->
+      <section class="slider_section">
+        <div class="slider_container">
+          <div class="swiper slider_section_swiper">
+            <div class="swiper-wrapper">
+              <!-- item  -->
+              <div class="swiper-slide slider_section_fit">
+                <div class="slider_section_item">
+                  <img src="assets/images/slider_04.jpg" alt="" />
+                  <!-- New tag  -->
+                   <div class="tag_new">New</div>
+                </div>
+              </div>
+
+              <!-- item  -->
+              <div class="swiper-slide slider_section_fit">
+                <div class="slider_section_item">
+                  <img src="assets/images/slider_01.jpg" alt="" />
+                  <!-- Price  -->
+                  <div class="slider_item_price">
+                    <div class="slider_location">
+                      GREEN PLACE, SINGAPORE
+                    </div>
+                    <div class="slider_price">
+                      $109,000
+                    </div>
+                    <div class="slider_info">
+                      Apartment - 2 Beds - 58m2 
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- item  -->
+              <div class="swiper-slide slider_section_fit">
+                <div class="slider_section_item">
+                  <img src="assets/images/slider_02.jpg" alt="" />
+                </div>
+              </div>
+
+              <!-- item  -->
+              <div class="swiper-slide slider_section_fit">
+                <div class="slider_section_item">
+                  <img src="assets/images/slider_03.jpg" alt="" />
+                </div>
+              </div>
+              
+                 <!-- item  -->
+                 <div class="swiper-slide slider_section_fit">
+                  <div class="slider_section_item">
+                    <img src="assets/images/slider_04.jpg" alt="" />
+                    <!-- New tag  -->
+                     <div class="tag_new">New</div>
+                  </div>
+                </div>
+  
+                <!-- item  -->
+                <div class="swiper-slide slider_section_fit">
+                  <div class="slider_section_item">
+                    <img src="assets/images/slider_01.jpg" alt="" />
+                    <!-- Price  -->
+                    <div class="slider_item_price">
+                      <div class="slider_location">
+                        GREEN PLACE, SINGAPORE
+                      </div>
+                      <div class="slider_price">
+                        $109,000
+                      </div>
+                      <div class="slider_info">
+                        Apartment - 2 Beds - 58m2 
+                      </div>
+                    </div>
+                  </div>
+                </div>
+  
+                <!-- item  -->
+                <div class="swiper-slide slider_section_fit">
+                  <div class="slider_section_item">
+                    <img src="assets/images/slider_02.jpg" alt="" />
+                  </div>
+                </div>
+  
+                <!-- item  -->
+                <div class="swiper-slide slider_section_fit">
+                  <div class="slider_section_item">
+                    <img src="assets/images/slider_03.jpg" alt="" />
+                  </div>
+                </div>
+            </div>
+            <div class="swiper-scrollbar slider_section_scrollbar"></div>
+            <img src="assets/images/slider_star.png" alt="" class="slider_img_star"/>
           </div>
-          <div class="swiper-pagination"></div>
-
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-
-          <div class="swiper-scrollbar"></div>
+          <div class="slider_footer">
+            <div class="customer_pagi">
+              <div class="customer_page">
+                <div id="slider_currpage">00</div>
+                / <span id="slider_totalpage">00</span>
+              </div>
+            </div>
+            <div class="slider_discover">
+              <div>Discover our top properties</div>
+              <div class="arrow_page">
+                <div class="customer_arrow pre slider_arrow_pre">
+                  <img src="assets/svgs/arrow.svg" alt="" />
+                </div>
+                <div class="customer_arrow next slider_arrow_next">
+                  <img src="assets/svgs/arrow.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-      </section> -->
+      </section>
 
       <!-- Service -->
       <section class="service_section">
@@ -201,9 +300,9 @@
       </section>
 
       <!-- Customer -->
-      <section class="customer_section">
-        <div class="slide_customer">
-          <div class="customer_item">
+      <section class="customer_section swiper customer_swiper">
+        <div class="slide_customer swiper-wrapper">
+          <div class="customer_item swiper-slide">
             <div class="customer_img">
               <img src="assets/images/customer_01.jpg" alt="" />
             </div>
@@ -226,14 +325,65 @@
               </div>
             </div>
           </div>
+
+          <div class="customer_item swiper-slide">
+            <div class="customer_img">
+              <img src="assets/images/customer_01.jpg" alt="" />
+            </div>
+            <div class="customer_text">
+              <div class="customer_name">Calantha</div>
+              <div class="customer_line"></div>
+              <div class="customer_desc">
+                I had an outstanding experience working with Elysium during the
+                sale of my property. From the initial consultation to the final
+                closing, their team demonstrated the utmost professionalism,
+                expertise, and dedication.
+                <br />
+                <br />
+                Their knowledge of the market was truly impressive. They
+                conducted a thorough analysis of my property, taking into
+                consideration various factors to accurately price it for maximum
+                value. Their marketing strategies were exceptional, utilizing
+                high-quality photography and virtual tours that showcased the
+                property's unique features.
+              </div>
+            </div>
+          </div>
+
+          <div class="customer_item swiper-slide">
+            <div class="customer_img">
+              <img src="assets/images/customer_01.jpg" alt="" />
+            </div>
+            <div class="customer_text">
+              <div class="customer_name">Almira</div>
+              <div class="customer_line"></div>
+              <div class="customer_desc">
+                I had an outstanding experience working with Elysium during the
+                sale of my property. From the initial consultation to the final
+                closing, their team demonstrated the utmost professionalism,
+                expertise, and dedication.
+                <br />
+                <br />
+                Their knowledge of the market was truly impressive. They
+                conducted a thorough analysis of my property, taking into
+                consideration various factors to accurately price it for maximum
+                value. Their marketing strategies were exceptional, utilizing
+                high-quality photography and virtual tours that showcased the
+                property's unique features.
+              </div>
+            </div>
+          </div>
         </div>
         <div class="customer_pagi">
-          <div class="customer_page">01 / <span> 03</span></div>
+          <div class="customer_page">
+            <div id="customer_currpage">00</div>
+            / <span id="customer_totalpage">00</span>
+          </div>
           <div class="arrow_page">
-            <div class="customer_arrow pre">
+            <div class="customer_arrow pre customer_arrow_pre">
               <img src="assets/svgs/arrow.svg" alt="" />
             </div>
-            <div class="customer_arrow next">
+            <div class="customer_arrow next customer_arrow_next">
               <img src="assets/svgs/arrow.svg" alt="" />
             </div>
           </div>
@@ -243,19 +393,19 @@
       <!-- Statistical -->
       <section class="statistical_section">
         <div class="statistical_item">
-          <p>634</p>
+          <p id="counter_01" class="counter_js" data-target="634"></p>
           <span>SPACIOUS APARTMENTS</span>
         </div>
         <div class="statistical_item">
-          <p>839</p>
+          <p id="counter_02" class="counter_js" data-target="839"></p>
           <span>PARKING SPOTS</span>
         </div>
         <div class="statistical_item">
-          <p>8212</p>
+          <p id="counter_03" class="counter_js" data-target="8212"></p>
           <span>SQUARE AREAS</span>
         </div>
         <div class="statistical_item">
-          <p>45</p>
+          <p id="counter_04" class="counter_js" data-target="45"></p>
           <span>GREEN SPACES</span>
         </div>
       </section>
@@ -317,7 +467,7 @@
               </div>
               <div class="wrapper_collapse">
                 <div id="discover_collapse_01" class="collapse_item active">
-                  <div class="collapse_title"  id="collapse_title_01">
+                  <div class="collapse_title" id="collapse_title_01">
                     <div class="title_icon" id="discover_btn_01">
                       <svg
                         width="14"
@@ -343,8 +493,8 @@
                   </div>
                 </div>
 
-                <div id="discover_collapse_02"  class="collapse_item">
-                  <div class="collapse_title"  id="collapse_title_02">
+                <div id="discover_collapse_02" class="collapse_item">
+                  <div class="collapse_title" id="collapse_title_02">
                     <div class="title_icon" id="discover_btn_02">
                       <svg
                         width="14"
@@ -366,15 +516,15 @@
                   <div class="collapse_desc">
                     Lorem ipsum proin gravida nibh vel velit auctor aliollic
                     itudlorem quis bibendum auctor nisi elit consequat ipsum,
-                    nec sagittis sem nibh id elit uis sed odio sit amet.
-                    Lorem ipsum proin gravida nibh vel velit auctor aliollic
-                    itudlorem quis bibendum auctor nisi elit consequat ipsum,
-                    nec sagittis sem nibh id elit uis sed odio sit amet.
+                    nec sagittis sem nibh id elit uis sed odio sit amet. Lorem
+                    ipsum proin gravida nibh vel velit auctor aliollic itudlorem
+                    quis bibendum auctor nisi elit consequat ipsum, nec sagittis
+                    sem nibh id elit uis sed odio sit amet.
                   </div>
                 </div>
 
-                <div  id="discover_collapse_03"  class="collapse_item">
-                  <div class="collapse_title"  id="collapse_title_03">
+                <div id="discover_collapse_03" class="collapse_item">
+                  <div class="collapse_title" id="collapse_title_03">
                     <div class="title_icon" id="discover_btn_03">
                       <svg
                         width="14"
@@ -391,7 +541,9 @@
                         />
                       </svg>
                     </div>
-                    <div class="title_text">DO YOU OFFER INTEREST-FREE PLANS?</div>
+                    <div class="title_text">
+                      DO YOU OFFER INTEREST-FREE PLANS?
+                    </div>
                   </div>
                   <div class="collapse_desc">
                     Lorem ipsum proin gravida nibh vel velit auctor aliollic
@@ -479,6 +631,8 @@
     </main>
 
     <!-- Script  -->
+
+    <script src="https://cdn.jsdelivr.net/npm/countup@1.8.2/dist/countUp.min.js"></script>
     <script src="assets/js/smooth-scrollbar.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>

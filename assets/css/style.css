@@ -326,9 +326,186 @@ a {
   padding-left: 17rem;
 }
 
-.swiper {
-  width: 600px;
-  height: 300px;
+/* Slider section */
+.slider_section_swiper {
+  position: relative;
+}
+
+.slider_section_swiper::after {
+  content: '';
+  width: 14rem;
+  height: 0.4rem;
+  background-color: #fff;
+  position: absolute;
+  right: 0;
+  top: 9.8rem;
+  z-index: 10000;
+}
+
+.slider_section_swiper::before {
+  content: '';
+  width: 0.58rem;
+  height: 55rem;
+  background-color: #fff;
+  position: absolute;
+  right: 10.6rem;
+  top: 12.8rem;
+  z-index: 10000;
+}
+
+.slider_section_swiper .slider_img_star {
+  position: absolute;
+  right: 6.3rem;
+  top: 0;
+  z-index: 100000;
+  height: 19.241rem;
+  width: 9.1rem;
+  object-fit: cover;
+}
+
+.slider_container {
+  width: 100%;
+  height: 100%;
+  max-width: var(--width-page);
+  margin: auto;
+}
+
+.slider_section_item {
+  margin-right: 4rem;
+  padding-bottom: 8.2rem;
+  width: 50rem;
+  height: 76rem;
+  position: relative;
+}
+
+.slider_section_item .tag_new {
+  padding: 2.2rem 3rem;
+  width: fit-content;
+  background-color: var(--text-brand);
+  color: var(--text-main);
+  position: absolute;
+  right: 3.8rem;
+  top: 4.5rem;
+  font-family: var(--font-title) !important;
+  font-size: 4rem;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slider_section_item .slider_item_price {
+  width: 100%;
+  background-color: var(--text-main);
+  color: var(--bg-main);
+  position: absolute;
+  left: 0;
+  bottom: 8.2rem;
+  padding: 2.9rem;
+}
+
+.slider_section_item .slider_item_price .slider_location {
+  color: var(--bg-main);
+  padding-bottom: 2.8rem;
+}
+
+
+.slider_section_item .slider_item_price .slider_price {
+  color: var(--text-brand);
+  padding-bottom: 0.7rem;
+  font-size: 4.497rem;
+  font-weight: 500;
+  line-height: 4.893rem;
+  text-align: left;
+}
+
+.slider_section_item .slider_item_price .slider_info {
+  color: var(--bg-main);
+  font-size: 1.6rem;
+  font-weight: 300;
+  line-height: 1.741rem;
+  text-align: left;
+}
+
+.slider_section_item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.slider_section_fit {
+  width: 54rem !important;
+}
+
+.slider_section_scrollbar {
+  background-color: rgb(255 255 255 / 70%) !important;
+  height: 0.2rem;
+}
+
+.slider_section_scrollbar  .swiper-scrollbar-drag {
+  background-color: var(--text-brand) !important;
+  height: 0.8rem;
+  top: -0.2rem;
+  border-radius: 0;
+}
+
+.slider_container .slider_footer {
+  padding: 2.4rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.slider_footer .customer_pagi {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+
+.slider_footer .customer_pagi .customer_page {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 3.624rem;
+  text-align: left;
+}
+
+.slider_footer .customer_pagi .customer_page div {
+  display: inline;
+}
+
+.slider_footer .customer_pagi .customer_page span {
+  color: var(--text-brand);
+}
+
+.slider_footer .slider_discover {
+  display: flex;
+  gap: 2.4rem;
+  align-items: center;
+}
+
+.slider_footer .slider_discover  .arrow_page {
+  display: flex;
+  gap: 1rem;
+}
+
+.slider_footer .slider_discover  .arrow_page .customer_arrow {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0.1rem solid var(--text-brand);
+  cursor: pointer;
+}
+
+.slider_footer .slider_discover  .arrow_page .customer_arrow img {
+  width: auto;
+  height: 1.25rem;
+}
+
+.slider_footer .slider_discover .arrow_page .customer_arrow.pre {
+  transform: rotate(180deg);
 }
 
 /* Service */
@@ -454,7 +631,6 @@ a {
   max-width: var(--width-page);
   margin: auto;
   display: flex;
-  padding-right: 15.8rem;
   position: relative;
 }
 
@@ -465,6 +641,7 @@ a {
   display: flex;
   gap: 4rem;
   align-items: center;
+  z-index: 1000;
 }
 
 .customer_section .customer_pagi .customer_page {
@@ -473,6 +650,11 @@ a {
   line-height: 3.624rem;
   text-align: left;
 }
+
+.customer_section .customer_pagi .customer_page div {
+  display: inline;
+}
+
 .customer_section .customer_pagi .customer_page span {
   color: var(--text-brand);
 }
@@ -504,6 +686,7 @@ a {
 
 .slide_customer .customer_item {
   display: flex;
+  padding-right: 15.8rem;
 }
 
 .slide_customer .customer_item .customer_img {
