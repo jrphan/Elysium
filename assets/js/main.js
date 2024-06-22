@@ -39,33 +39,30 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   }
 
-  // if (!isMobile() && !isIPad() && !isIOS()) {
-  //   var Scrollbar = window.Scrollbar;
-  //   Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
-  // } else {
-  //   var style = document.createElement("style");
-  //   style.innerHTML = `
-  //     body {
-  //       overflow: auto;
-  //       overflow-x: hidden;
-  //     }
+  if (!isMobile() && !isIPad() && !isIOS()) {
+    var Scrollbar = window.Scrollbar;
 
-  //     main {
-  //       overflow: auto !important;
-  //     }
-  //   `;
-  //   document.head.appendChild(style);
-  // }
+    Scrollbar.init(document.querySelector("#wrapper_scrollbar"), {
+      damping: 0.05,
+      thumbMinSize: 20,
+      renderByPixels: true,
+      alwaysShowTracks: true,
+      continuousScrolling: true,
+    });
+  } else {
+    var style = document.createElement("style");
+    style.innerHTML = `
+      body {
+        overflow: auto;
+        overflow-x: hidden;
+      }
 
-  var Scrollbar = window.Scrollbar;
-
-  Scrollbar.init(document.querySelector("#wrapper_scrollbar"), {
-    damping: 0.05,
-    thumbMinSize: 20,
-    renderByPixels: true,
-    alwaysShowTracks: true,
-    continuousScrolling: true,
-  });
+      main {
+        overflow: auto !important;
+      }
+    `;
+    document.head.appendChild(style);
+  }
 
   const toggleActive = (element, elementTitle) => {
     element.classList.toggle("active");
@@ -124,13 +121,17 @@ document.addEventListener("DOMContentLoaded", function () {
         mutation.type === "attributes" &&
         mutation.attributeName === "style"
       ) {
-        console.log("22");
         handleScroll();
       }
     }
   });
 
-  observer.observe(scrollContent, { attributes: true });
+  if (!isMobile() && !isIPad() && !isIOS() && scrollContent) {
+    observer.observe(scrollContent, { attributes: true });
+  } else {
+    window.addEventListener("scroll", handleScroll);
+  }
+
   handleScroll();
 
   new Swiper(".slider_section_swiper", {
