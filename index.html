@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="assets/fonts/fonts.css" />
 
     <!-- Lib Css  -->
+    <link rel="stylesheet" href="assets/css/smooth-scrollbar.css" />
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
     <!-- Css -->
     <link rel="stylesheet" href="assets/css/style.css" />
@@ -26,7 +27,7 @@
     <div class="line_center"></div>
     <div class="line_right"></div>
 
-    <main>
+    <main id="wrapper_scrollbar" data-scrollbar="true">
       <!-- Header -->
       <header class="header_home">
         <div class="wrapper_container">
@@ -104,27 +105,21 @@
         </div>
       </section>
 
-      <section>
+      <!-- <section>
         <div class="swiper">
-          <!-- Additional required wrapper -->
           <div class="swiper-wrapper">
-            <!-- Slides -->
             <div class="swiper-slide">Slide 1</div>
             <div class="swiper-slide">Slide 2</div>
             <div class="swiper-slide">Slide 3</div>
-            ...
           </div>
-          <!-- If we need pagination -->
           <div class="swiper-pagination"></div>
 
-          <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
 
-          <!-- If we need scrollbar -->
           <div class="swiper-scrollbar"></div>
         </div>
-      </section>
+      </section> -->
 
       <!-- Service -->
       <section class="service_section">
@@ -302,10 +297,116 @@
         </div>
       </section>
 
-        <!-- Discover -->
-        <section class="discover_section"></section>
+      <!-- Discover -->
+      <section class="discover_section">
+        <div class="wrapper_container">
+          <div class="container discover_container">
+            <div class="discover_left">
+              <img
+                src="assets/images/discover_01.jpg"
+                alt=""
+                class="discover_img_01"
+              />
+              <div class="discover_img_02">
+                <img src="assets/images/discover_02.jpg" alt="" />
+              </div>
+            </div>
+            <div class="discover_right">
+              <div class="discover_right_title">
+                <span>DISCOVER A NEW WAY OF LIVING &</span> ENJOYING YOUR HOME
+              </div>
+              <div class="wrapper_collapse">
+                <div id="discover_collapse_01" class="collapse_item active">
+                  <div class="collapse_title"  id="collapse_title_01">
+                    <div class="title_icon" id="discover_btn_01">
+                      <svg
+                        width="14"
+                        height="10"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.25 7.27204L11.1667 9.57227L7 5.10798L2.83333 9.57227L0.75 7.27204L7 0.643694L13.25 7.27204Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title_text">WHAT MATERIALS ARE USED?</div>
+                  </div>
+                  <div class="collapse_desc">
+                    Lorem ipsum proin gravida nibh vel velit auctor aliollic
+                    itudlorem quis bibendum auctor nisi elit consequat ipsum,
+                    nec sagittis sem nibh id elit uis sed odio sit amet.
+                  </div>
+                </div>
 
+                <div id="discover_collapse_02"  class="collapse_item">
+                  <div class="collapse_title"  id="collapse_title_02">
+                    <div class="title_icon" id="discover_btn_02">
+                      <svg
+                        width="14"
+                        height="10"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.25 7.27204L11.1667 9.57227L7 5.10798L2.83333 9.57227L0.75 7.27204L7 0.643694L13.25 7.27204Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title_text">HOW TO BUY?</div>
+                  </div>
+                  <div class="collapse_desc">
+                    Lorem ipsum proin gravida nibh vel velit auctor aliollic
+                    itudlorem quis bibendum auctor nisi elit consequat ipsum,
+                    nec sagittis sem nibh id elit uis sed odio sit amet.
+                    Lorem ipsum proin gravida nibh vel velit auctor aliollic
+                    itudlorem quis bibendum auctor nisi elit consequat ipsum,
+                    nec sagittis sem nibh id elit uis sed odio sit amet.
+                  </div>
+                </div>
 
+                <div  id="discover_collapse_03"  class="collapse_item">
+                  <div class="collapse_title"  id="collapse_title_03">
+                    <div class="title_icon" id="discover_btn_03">
+                      <svg
+                        width="14"
+                        height="10"
+                        viewBox="0 0 14 10"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M13.25 7.27204L11.1667 9.57227L7 5.10798L2.83333 9.57227L0.75 7.27204L7 0.643694L13.25 7.27204Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </div>
+                    <div class="title_text">DO YOU OFFER INTEREST-FREE PLANS?</div>
+                  </div>
+                  <div class="collapse_desc">
+                    Lorem ipsum proin gravida nibh vel velit auctor aliollic
+                    itudlorem quis bibendum auctor nisi elit consequat ipsum,
+                    nec sagittis sem nibh id elit uis sed odio sit amet.
+                  </div>
+                </div>
+              </div>
+              <div class="any_question">
+                Still have any question? <a href="">Contact Us</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Instagram -->
       <section class="instagram_section">
@@ -378,6 +479,7 @@
     </main>
 
     <!-- Script  -->
+    <script src="assets/js/smooth-scrollbar.js"></script>
     <script src="assets/js/swiper-bundle.min.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
