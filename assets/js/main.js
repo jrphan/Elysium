@@ -194,4 +194,30 @@ document.addEventListener("DOMContentLoaded", function () {
       },
     },
   });
+
+  const observer_animate = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          if (!entry.target.classList.contains("animate_custom")) {
+            entry.target.classList.add(
+              "animate__animated",
+              "animate__fadeInUp",
+              "animate__faster"
+            );
+            entry.target.style.opacity = 1;
+          }
+
+          observer_animate.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0,
+    }
+  );
+
+  document.querySelectorAll(".animate__animated").forEach((element) => {
+    observer_animate.observe(element);
+  });
 });

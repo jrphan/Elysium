@@ -217,7 +217,7 @@ a {
   left: 50%;
   transform: translateX(-50%);
   z-index: 10;
-  /* text-shadow: 0.2rem 0.2rem 0.5rem #000; */
+  text-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 
 .banner_container .banner_text span {
@@ -1204,7 +1204,7 @@ a {
   z-index: 10;
   color: var(--text-brand);
   text-transform: uppercase;
-  /* text-shadow: 0.2rem 0.2rem 0.5rem #000; */
+  text-shadow: 0.2rem 0.2rem 0.5rem #000;
 }
 
 .instagram_section .instagram_left {
