@@ -1,5 +1,42 @@
 @media (max-width: 767px) {
-    /* html {
+    html {
       font-size: 6px !important;
-    } */
+    }
+
+    .header_containter .phone_header {
+      display: none;
+    }
+
+    .wrapper_container {
+      padding: 0 4rem;
+    }
+
+    .header_containter .logo_header {
+      width: 100%;
+      justify-content: initial;
+    }
+
+    .banner_container .banner_text {
+      font-size: 6rem;
+      line-height: 8rem;
+      width: 65rem;
+      top: 28rem;
+    }
+
+.banner_container .wrapper_image_banner .bg_right {
+  width: 25.8rem;
+  height: 32.5rem;
+  right: -2rem;
+  top: -8rem;
+}
+
+.banner_container .wrapper_image_banner .bg_left {
+  width: 40rem;
+  height: 58rem;
+}
+
+.dream_home_container .dream_home_text {
+  font-size: 6rem;
+  line-height: 8rem;
+}
 }
