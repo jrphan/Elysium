@@ -38,23 +38,26 @@ function isIPad() {
   );
 }
 
-if (!isMobile() && !isIPad() && !isIOS()) {
-  var Scrollbar = window.Scrollbar;
-  Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
-} else {
-  var style = document.createElement("style");
-  style.innerHTML = `
-    body {
-      overflow: auto;
-      overflow-x: hidden;
-    }
+// if (!isMobile() && !isIPad() && !isIOS()) {
+//   var Scrollbar = window.Scrollbar;
+//   Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
+// } else {
+//   var style = document.createElement("style");
+//   style.innerHTML = `
+//     body {
+//       overflow: auto;
+//       overflow-x: hidden;
+//     }
 
-    main {
-      overflow: auto !important;
-    }
-  `;
-  document.head.appendChild(style);
-}
+//     main {
+//       overflow: auto !important;
+//     }
+//   `;
+//   document.head.appendChild(style);
+// }
+
+var Scrollbar = window.Scrollbar;
+Scrollbar.init(document.querySelector("#wrapper_scrollbar"));
 
 const toggleActive = (element, elementTitle) => {
   element.classList.toggle("active");
