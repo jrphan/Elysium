@@ -73,151 +73,150 @@ discover_btn_03.onclick = function () {
   toggleActive(discover_collapse_03, collapse_title_03);
 };
 
-document.addEventListener("DOMContentLoaded", function () {
-  const scrollContent = document.querySelector(".scroll-content");
-  const counters = document.querySelectorAll(".counter_js");
-  const duration = 2;
+const scrollContent = document.querySelector(".scroll-content");
+const counters = document.querySelectorAll(".counter_js");
+const duration = 2;
 
-  function startCountUp(target, targetValue) {
-    const counter = new CountUp(target, 0, targetValue, 0, duration, {
-      useEasing: true,
-      separator: "",
-      decimal: ".",
-    });
-    counter.start();
-    let el = document.getElementById(target);
+function startCountUp(target, targetValue) {
+  const counter = new CountUp(target, 0, targetValue, 0, duration, {
+    useEasing: true,
+    separator: "",
+    decimal: ".",
+  });
+  counter.start();
+  let el = document.getElementById(target);
+  if (el) {
+    el.classList.add("loaded");
+  }
+}
+
+function handleScroll() {
+  counters.forEach((counter) => {
+    let el = document.getElementById(counter.id);
+
     if (el) {
-      el.classList.add("loaded");
+      if (!el.classList.contains("loaded")) {
+        const counterId = counter.id;
+        const targetValue = parseInt(counter.dataset.target);
+
+        if (isElementInViewport(document.getElementById(counter.id))) {
+          startCountUp(counterId, targetValue);
+        }
+      }
+    }
+  });
+}
+
+const observer = new MutationObserver((mutationsList) => {
+  for (let mutation of mutationsList) {
+    if (mutation.type === "attributes" && mutation.attributeName === "style") {
+      console.log("22");
+      handleScroll();
     }
   }
+});
 
-  function handleScroll() {
-    counters.forEach((counter) => {
-      let el = document.getElementById(counter.id);
+observer.observe(scrollContent, { attributes: true });
+handleScroll();
 
-      if (el) {
-        if (!el.classList.contains("loaded")) {
-          const counterId = counter.id;
-          const targetValue = parseInt(counter.dataset.target);
+new Swiper(".slider_section_swiper", {
+  direction: "horizontal",
+  loop: false,
+  effect: "slide",
+  speed: 800,
+  slidesPerView: "auto",
+  spaceBetween: 0,
+  navigation: {
+    nextEl: ".slider_arrow_next",
+    prevEl: ".slider_arrow_pre",
+  },
+  scrollbar: {
+    el: ".swiper-scrollbar",
+  },
+  on: {
+    init: function () {
+      var currPageElement = document.getElementById("slider_currpage");
+      var totalPageElement = document.getElementById("slider_totalpage");
 
-          if (isElementInViewport(document.getElementById(counter.id))) {
-            startCountUp(counterId, targetValue);
-          }
+      if (currPageElement && totalPageElement) {
+        var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
+        var totalPage = this.slides.length.toString().padStart(2, "0");
+
+        currPageElement.textContent = currentPage;
+        totalPageElement.textContent = totalPage;
+      }
+    },
+    slideChange: function () {
+      var currPageElement = document.getElementById("slider_currpage");
+
+      if (currPageElement) {
+        var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
+
+        currPageElement.textContent = currentPage;
+      }
+    },
+  },
+});
+
+new Swiper(".customer_swiper", {
+  loop: false,
+  speed: 800,
+  effect: "slide",
+  navigation: {
+    nextEl: ".customer_arrow_next",
+    prevEl: ".customer_arrow_pre",
+  },
+  on: {
+    init: function () {
+      var currPageElement = document.getElementById("customer_currpage");
+      var totalPageElement = document.getElementById("customer_totalpage");
+
+      if (currPageElement && totalPageElement) {
+        var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
+        var totalPage = this.slides.length.toString().padStart(2, "0");
+
+        currPageElement.textContent = currentPage;
+        totalPageElement.textContent = totalPage;
+      }
+    },
+    slideChange: function () {
+      var currPageElement = document.getElementById("customer_currpage");
+
+      if (currPageElement) {
+        var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
+
+        currPageElement.textContent = currentPage;
+      }
+    },
+  },
+});
+
+const observer_animate = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        if (!entry.target.classList.contains("animate_custom")) {
+          entry.target.classList.add(
+            "animate__animated",
+            "animate__fadeInUp",
+            "animate__faster"
+          );
+          entry.target.style.opacity = 1;
         }
+
+        observer_animate.unobserve(entry.target);
       }
     });
+  },
+  {
+    threshold: 0,
   }
+);
 
-  const observer = new MutationObserver((mutationsList) => {
-    for (let mutation of mutationsList) {
-      if (
-        mutation.type === "attributes" &&
-        mutation.attributeName === "style"
-      ) {
-        console.log("22");
-        handleScroll();
-      }
-    }
-  });
-
-  observer.observe(scrollContent, { attributes: true });
-  handleScroll();
-
-  new Swiper(".slider_section_swiper", {
-    direction: "horizontal",
-    loop: false,
-    effect: "slide",
-    speed: 800,
-    slidesPerView: "auto",
-    spaceBetween: 0,
-    navigation: {
-      nextEl: ".slider_arrow_next",
-      prevEl: ".slider_arrow_pre",
-    },
-    scrollbar: {
-      el: ".swiper-scrollbar",
-    },
-    on: {
-      init: function () {
-        var currPageElement = document.getElementById("slider_currpage");
-        var totalPageElement = document.getElementById("slider_totalpage");
-
-        if (currPageElement && totalPageElement) {
-          var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
-          var totalPage = this.slides.length.toString().padStart(2, "0");
-
-          currPageElement.textContent = currentPage;
-          totalPageElement.textContent = totalPage;
-        }
-      },
-      slideChange: function () {
-        var currPageElement = document.getElementById("slider_currpage");
-
-        if (currPageElement) {
-          var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
-
-          currPageElement.textContent = currentPage;
-        }
-      },
-    },
-  });
-
-  new Swiper(".customer_swiper", {
-    loop: false,
-    speed: 800,
-    effect: "slide",
-    navigation: {
-      nextEl: ".customer_arrow_next",
-      prevEl: ".customer_arrow_pre",
-    },
-    on: {
-      init: function () {
-        var currPageElement = document.getElementById("customer_currpage");
-        var totalPageElement = document.getElementById("customer_totalpage");
-
-        if (currPageElement && totalPageElement) {
-          var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
-          var totalPage = this.slides.length.toString().padStart(2, "0");
-
-          currPageElement.textContent = currentPage;
-          totalPageElement.textContent = totalPage;
-        }
-      },
-      slideChange: function () {
-        var currPageElement = document.getElementById("customer_currpage");
-
-        if (currPageElement) {
-          var currentPage = (this.activeIndex + 1).toString().padStart(2, "0");
-
-          currPageElement.textContent = currentPage;
-        }
-      },
-    },
-  });
-
-  const observer_animate = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          if (!entry.target.classList.contains("animate_custom")) {
-            entry.target.classList.add(
-              "animate__animated",
-              "animate__fadeInUp",
-              "animate__faster"
-            );
-            entry.target.style.opacity = 1;
-          }
-
-          observer_animate.unobserve(entry.target);
-        }
-      });
-    },
-    {
-      threshold: 0,
-    }
-  );
-
-  document.querySelectorAll(".animate__animated").forEach((element) => {
-    observer_animate.observe(element);
-  });
+document.querySelectorAll(".animate__animated").forEach((element) => {
+  observer_animate.observe(element);
 });
+
+//   document.addEventListener("DOMContentLoaded", function () {
+
+// });
