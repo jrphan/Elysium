@@ -255,7 +255,7 @@
 
   .statistical_section .statistical_item {
     width: 100%;
-    margin: 0 12rem;
+    margin: 0 16rem;
     gap: 1rem;
     border-bottom: none;
   }
@@ -455,11 +455,23 @@
   /* Line */
   .line_left {
     left: calc(50vw - 17rem);
-    display: none;
+    /* display: none; */
   }
 
   .line_right {
     right: calc(50vw - 17rem);
-    display: none;
+    /* display: none; */
+  }
+
+  .service_container .service_desc .desc_item .item_index {
+    border: none;
+    color: var(--text-brand);
+    font-weight: 700;
+    width: 12rem;
+    height: 12rem;
+  }
+
+  .service_container .service_desc .desc_item {
+    gap: 0;
   }
 }
