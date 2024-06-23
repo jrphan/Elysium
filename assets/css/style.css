@@ -186,6 +186,12 @@ a {
 .banner_container .wrapper_image_banner .bg_left img {
   width: 100%;
   height: 100%;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.banner_container .wrapper_image_banner .bg_left:hover img {
+  transform: scale(1.1);
+  transition: color 0.5s ease, transform 0.5s ease;
 }
 
 .banner_container .wrapper_image_banner .bg_right {
@@ -203,7 +209,14 @@ a {
 .banner_container .wrapper_image_banner .bg_right img {
   width: 100%;
   height: 100%;
+  transition: color 0.5s ease, transform 0.5s ease;
 }
+
+.banner_container .wrapper_image_banner .bg_right:hover img {
+  transform: scale(1.1);
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
 
 .banner_container .banner_text {
   font-family: var(--font-title-thin) !important;
@@ -294,18 +307,36 @@ a {
   img {
   width: 28.3rem;
   height: 40rem;
+  transition: color 0.5s ease, transform 0.5s ease;
 }
+
+.dream_home_container
+  .dream_home_desc
+  .dream_home_desc_images
+  .first_img
+  .wrapper_first_img:hover
+  img {
+  transition: color 0.5s ease, transform 0.5s ease;
+  transform: scale(1.1);
+}
+
 
 .dream_home_container .dream_home_desc .dream_home_desc_images .second_img {
   width: 48.2rem;
   height: 58.8rem;
   border: 0.2rem solid var(--text-main);
+  overflow: hidden;
 }
 
 .dream_home_container .dream_home_desc .dream_home_desc_images .second_img img {
   width: 100%;
   height: 100%;
-  border: 0.2rem 0px 0px 0px;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+
+.dream_home_container .dream_home_desc .dream_home_desc_images .second_img:hover img {
+  transition: color 0.5s ease, transform 0.5s ease;
+  transform: scale(1.1);
 }
 
 .dream_home_desc_images .img_dream_3 {
@@ -376,6 +407,7 @@ a {
   width: 50rem;
   height: 76rem;
   position: relative;
+  overflow: hidden;
 }
 
 .slider_section_item .tag_new {
@@ -430,8 +462,18 @@ a {
 .slider_section_item img {
   width: 100%;
   height: 100%;
+  max-height: 76rem;
   object-fit: cover;
+  transition: color 0.5s ease, transform 0.5s ease;
+  overflow: hidden;
 }
+
+.slider_section_item:hover img {
+  transition: color 0.5s ease, transform 0.5s ease;
+  cursor: pointer;
+}
+
+
 
 .slider_section_fit {
   width: 54rem !important;
@@ -1356,4 +1398,30 @@ footer {
   line-height: 2.16rem;
   color: #ffffff80;
   text-transform: uppercase;
+}
+
+.wrapper_hover {
+  position: relative;
+}
+
+.custom_cursor_hover {
+  position: absolute;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 50%;
+  background-color: #181d24eb;
+  pointer-events: none;
+  transition: transform 0.1s, opacity 0.3s;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--text-brand); 
+  font-size: 3rem; 
+  text-align: center;
+}
+
+.custom_cursor_hover.active {
+  opacity: 1;
 }

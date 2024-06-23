@@ -234,4 +234,43 @@ document.querySelectorAll(".animate__animated").forEach((element) => {
   observer_animate.observe(element);
 });
 
-document.addEventListener("DOMContentLoaded", function () {});
+document.addEventListener("DOMContentLoaded", function () {
+  const imageContainers = document.querySelectorAll(".wrapper_hover");
+  const customCursor = document.createElement("div");
+  customCursor.classList.add("custom_cursor_hover");
+  document.body.appendChild(customCursor);
+
+  let mouseX = 0,
+    mouseY = 0;
+  let cursorX = 0,
+    cursorY = 0;
+
+  function animate() {
+    cursorX += (mouseX - cursorX) * 0.1;
+    cursorY += (mouseY - cursorY) * 0.1;
+
+    customCursor.style.left = `${cursorX}px`;
+    customCursor.style.top = `${cursorY}px`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  imageContainers.forEach((container) => {
+    container.addEventListener("mousemove", function (e) {
+      mouseX = e.pageX;
+      mouseY = e.pageY;
+    });
+
+    container.addEventListener("mouseenter", function () {
+      customCursor.classList.add("active");
+      customCursor.textContent = container.getAttribute("data-text") || "VIEW";
+    });
+
+    container.addEventListener("mouseleave", function () {
+      customCursor.classList.remove("active");
+      customCursor.textContent = ""; // Clear the text when not hovering
+    });
+  });
+});
