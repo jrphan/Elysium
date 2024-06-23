@@ -110,7 +110,6 @@ function startCountUp(target, targetValue) {
 }
 
 function handleScroll() {
-  console.log("scroll");
   counters.forEach((counter) => {
     let el = document.getElementById(counter.id);
 
@@ -289,4 +288,40 @@ document.addEventListener("DOMContentLoaded", function () {
   setTimeout(() => {
     document.getElementById("loading_home").classList.remove("active");
   }, 300);
+
+  const animatedTexts = document.querySelectorAll(".animated_text");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const text = entry.target;
+          const words = text.innerText.split(" ");
+          var newDom = "";
+          const animationDelay =
+            text.getAttribute("data-animation-delay") || 100; // Lấy giá trị từ HTML hoặc mặc định là 130
+
+          words.forEach((word, index) => {
+            newDom +=
+              '<span class="word" style="animation-delay:' +
+              animationDelay * index +
+              'ms">' +
+              word +
+              "&nbsp;</span>";
+          });
+
+          text.innerHTML = newDom;
+
+          observer.unobserve(text); // Dừng quan sát sau khi hiệu ứng đã được kích hoạt
+        }
+      });
+    },
+    {
+      threshold: 0,
+    }
+  );
+
+  animatedTexts.forEach((text) => {
+    observer.observe(text);
+  });
 });

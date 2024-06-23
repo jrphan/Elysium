@@ -457,6 +457,16 @@
     padding-bottom: 10rem;
   }
 
+  .footer_container .social_footer .icon {
+    width: 7rem;
+    height: 7rem;
+  }
+
+  .footer_container .social_footer .icon img {
+    width: auto;
+    height: 2.5rem;
+  }
+
   /* Line */
   .line_left {
     left: calc(50vw - 17rem);
