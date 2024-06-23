@@ -829,8 +829,35 @@ a {
   letter-spacing: 0.2em;
   text-align: left;
   text-transform: uppercase;
+  padding: 4.288rem;
+  display: flex;
+  align-items: center;
+  gap: 1.826rem;
+  position: relative;
+  transition: all 1s ease;
 }
 
+.office_container .office_title .btn_more:hover {
+  color: var(--text-brand);
+  transition: all 1s ease;
+}
+
+.office_container .office_title .btn_more .bg_btn_more {
+  position: absolute;
+  left: 0rem;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 9.053rem;
+  height: 9.371rem;
+}
+
+
+.office_container .office_title .btn_more div {
+width:0.79rem;
+height:0.79rem;
+background-color: var(--text-brand);
+border-radius: 50%;
+}
 
 .office_container .office_content_01 {
   display: flex;
