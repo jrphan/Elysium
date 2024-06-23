@@ -10,6 +10,18 @@ let discover_btn_01 = document.getElementById("discover_btn_01");
 let discover_btn_02 = document.getElementById("discover_btn_02");
 let discover_btn_03 = document.getElementById("discover_btn_03");
 
+const menuList = document.getElementById("menu_list");
+const open_menu = document.getElementById("open_menu");
+const closeButton = document.getElementById("close_menu");
+
+open_menu.addEventListener("click", function () {
+  menuList.classList.add("active");
+});
+
+closeButton.addEventListener("click", function () {
+  menuList.classList.remove("active");
+});
+
 function isElementInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
