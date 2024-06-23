@@ -455,11 +455,11 @@
   /* Line */
   .line_left {
     left: calc(50vw - 17rem);
-    display: none;
+    /* display: none; */
   }
 
   .line_right {
     right: calc(50vw - 17rem);
-    display: none;
+    /* display: none; */
   }
 }
