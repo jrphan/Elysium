@@ -285,4 +285,8 @@ document.addEventListener("DOMContentLoaded", function () {
       customCursor.textContent = ""; // Clear the text when not hovering
     });
   });
+
+  setTimeout(() => {
+    document.getElementById("loading_home").classList.remove("active");
+  }, 300);
 });
