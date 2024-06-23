@@ -143,6 +143,11 @@
     line-height: 3.416rem;
   }
 
+  .prioritize_section .wrapper_prioritize_banner {
+    width: 100%;
+    height: 100%;
+  }
+
   .prioritize_section .prioritize_banner {
     width: 100%;
     height: 100%;

@@ -324,4 +324,24 @@ document.addEventListener("DOMContentLoaded", function () {
   animatedTexts.forEach((text) => {
     observer.observe(text);
   });
+
+  const elementsToAnimate = document.querySelectorAll(".el_zoom_in");
+
+  const observerZoomIN = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("zoom_in_effect");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    {
+      threshold: 0,
+    }
+  );
+
+  elementsToAnimate.forEach((element) => {
+    observerZoomIN.observe(element);
+  });
 });
